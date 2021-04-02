@@ -1,9 +1,18 @@
 <p>Nombre del empleado: {{getNombre()}}  </p>
+
 <p>Apellido del empleado: {{getApellido()}}  </p>
+
 <p>Edad del empleado: {{getEdad()>=18?"Mayor de edad":"Menor de edad" }}  </p>  <!--//interpolacion: texto dinamico-->
+
 <p>Empresa del empleado: {{empresa.value}}</p>
-Introduce la Empresa:
-<input type="text" #empresa (keyup)="llamaEmpresa(empresa.value)"> <!--//Evento en html:   (cuando) = "evento(parametro.value)"   -->
+
+<span>Ingresa la Empresa:</span> 
+<input type="text" #empresa (keyup)="llamaEmpresa(empresa.value)" [disabled]="getActivadoProperty()"> <!--//Evento en html:   (cuando) = "evento(parametro.value)"   -->
 <br>
+<span>Registrado</span> 
+<input type="checkbox" [checked]="getRegistrado()">
+
 <br>
+
+
 <!--input type="button" value="Aceptar" (click)="llamaEmpresa(empresa.value)"-->

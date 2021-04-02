@@ -22,9 +22,22 @@ export class EmpleadoComponent implements OnInit {
   getEdad() {
     return this.edad;
   }
+
   llamaEmpresa(empresa:string){
 
   }
+
+/* propiedades para binding */
+  private activadoProperty=true;
+  private registrado = false;
+
+
+getRegistrado(){
+  return this.registrado;
+}
+getActivadoProperty(){
+  return this.activadoProperty;
+}
 
   constructor() { }
   ngOnInit(): void {

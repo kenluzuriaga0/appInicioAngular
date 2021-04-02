@@ -10,7 +10,7 @@ export class EmpleadoComponent implements OnInit {
   private nombre = "Juan";
   private apellido = "Diaz";
   private edad = 23;
-  private empresa = "Super Empresa";
+  //private empresa = "Super Empresa";
 
 
   getNombre() {
@@ -22,10 +22,10 @@ export class EmpleadoComponent implements OnInit {
   getEdad() {
     return this.edad;
   }
-  getEmpresa() {
+  llamaEmpresa(empresa:string){
 
-    return this.empresa;
   }
+
   constructor() { }
   ngOnInit(): void {
   }

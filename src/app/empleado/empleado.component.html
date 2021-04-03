@@ -1,3 +1,4 @@
+<h3>Informacion del Empleado</h3>
 <p>Nombre del empleado: {{getNombre()}}  </p>
 
 <p>Apellido del empleado: {{getApellido()}}  </p>
@@ -6,13 +7,24 @@
 
 <p>Empresa del empleado: {{empresa.value}}</p>
 
+<h3>Formulario</h3>
+
 <span>Ingresa la Empresa:</span> 
 <input type="text" #empresa (keyup)="llamaEmpresa(empresa.value)" [disabled]="getActivadoProperty()"> <!--//Evento en html:   (cuando) = "evento(parametro.value)"   -->
+
 <br>
+
+{{textodeRegistro}} <br>
+
 <span>Registrado</span> 
-<input type="checkbox" [checked]="getRegistrado()">
+<input type="checkbox" [checked]="getRegistrado()" (click)="evento()">
 
 <br>
+<span>Registro con Radio</span>
 
+<input type="radio" value="Si" name="radio-registro" (click)="setUsuarioRegistro($event)">
+<input type="radio" value="No" name="radio-registro" (click)="setUsuarioRegistro($event)">
+<br>
+{{radioRegistro}}
 
 <!--input type="button" value="Aceptar" (click)="llamaEmpresa(empresa.value)"-->

@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Listado de Personas</h1>
+    <hr>
+
+    <form class="form-row">
+        <div class="form-group col-md-2">
+            <label for="nombre" class="sr-only"></label>
+            <input type="text" name="nombre" class="form-control" placeholder="Nombre" [(ngModel)]="nombreInput">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="apellido" class="sr-only"></label>
+            <input type="text" name="apellido" class="form-control" placeholder="Apellido" [(ngModel)]="apellidoInput">
+        </div>
+        
+        <div class="form-group col-md-2">
+            <button type="submit" class="btn btn-primary" (click)="agregarPersona()">Agregrar</button>
+        
+        </div>
+        
+
+
+    </form>
+</div>
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <div *ngFor="let persona of personas; let i=index">
+                {{i+1}} {{persona.nombre}} {{persona.apellido}}
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>

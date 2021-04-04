@@ -5,12 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { ListadoComponent } from './listado/listado.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpleadoComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
+    ListadoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
-<div class="container-fluid">
+<div class="container">
+    <h1>Empleados de la empresa!</h1>
     <h3>Informacion del Empleado</h3>
 
     <table class="tablita">
@@ -38,26 +39,29 @@
     <h3>Formulario</h3>
 
     <span>Ingresa la Empresa:</span>
-    <input type="text" [(ngModel)]="empresa" [disabled]="getActivadoProperty()">
+    <input type="text" [(ngModel)]="empresa" [disabled]="getRegistrado()"> <small> *to way binding*</small>
     <!--//Evento en html:   (cuando) = "evento(parametro.value)"   -->
-
+    <br>
     <br>
 
     {{textodeRegistro}} <br>
 
     <span>Registrado</span>
-    <input type="checkbox" [checked]="getRegistrado()" (click)="evento()">
-
+    <input type="checkbox" (click)="evento()"> <small> *event binding*</small>
+    <br>
     <br>
     <span>Registro con Radio</span>
 
-    <input type="radio" value="Si" name="radio-registro" (click)="setUsuarioRegistro($event)">
-    <input type="radio" value="No" name="radio-registro" (click)="setUsuarioRegistro($event)">
-    <br>
+    <input type="radio" value="Si" name="radio-registro" (click)="setUsuarioRegistro($event)"> <small> * ($event) *</small>
+    <input type="radio" value="No" name="radio-registro" (click)="setUsuarioRegistro($event)"> <small> * ($event) *</small>
     {{radioRegistro}}
+    <br>
+    <br>
+    <button class="btn btn-primary" (click)="cambiarDirectiva()"> Mostrar Texto</button><small> * directiva ngIf *</small>
 
-    <button class="btn btn-primary" (click)="cambiarDirectiva()" > Mostrar Texto</button>
-
-    <p *ngIf="mostrar"> {{textodeRegistro}} </p>
+    <p *ngIf="mostrar;else noMuestra"> Mensajito con directiva</p> 
+    <ng-template #noMuestra>
+        <p>No se muestra</p>
+    </ng-template>
 
 </div>

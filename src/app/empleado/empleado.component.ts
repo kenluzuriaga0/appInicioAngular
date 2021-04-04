@@ -32,7 +32,7 @@ export class EmpleadoComponent implements OnInit {
 
   /* propiedades para binding */
   private activadoProperty = false;
-  private registrado = false;
+  private registrado = true;
 
 
   getRegistrado() {
@@ -45,6 +45,7 @@ export class EmpleadoComponent implements OnInit {
   textodeRegistro = "no hay nadie registrado";
 
   evento() {
+    this.registrado=!this.registrado;
     this.textodeRegistro = "Usuario Registrado";
   }
 
@@ -62,11 +63,7 @@ export class EmpleadoComponent implements OnInit {
 
   mostrar: boolean = false;
   cambiarDirectiva() {
-    if (this.mostrar) {
-      this.mostrar = false;
-    } else {
-      this.mostrar = true;
-    }
+    this.mostrar=!this.mostrar;
   }
 
 

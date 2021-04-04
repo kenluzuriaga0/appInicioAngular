@@ -1,22 +1,50 @@
 <h3>Informacion del Empleado</h3>
-<p>Nombre del empleado: {{getNombre()}}  </p>
 
-<p>Apellido del empleado: {{getApellido()}}  </p>
+<table class="tablita">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Apellido
+        </th>
+        <th>
+            Edad
+        </th>
+        <th>
+            Empresa
+        </th>
+    </tr>
+    <tr>
+        <td>
+            {{getNombre()}}
+        </td>
+        <td>
+            {{getApellido()}}
+        </td>
+        <td>
+            {{getEdad()>=18?"Mayor de edad":"Menor de edad" }}
+        </td>
+        <td>
+            {{getEmpresa()}}
+        </td>
 
-<p>Edad del empleado: {{getEdad()>=18?"Mayor de edad":"Menor de edad" }}  </p>  <!--//interpolacion: texto dinamico-->
 
-<p>Empresa del empleado: {{empresa.value}}</p>
+</table>
+
+<!--//interpolacion: texto dinamico-->
 
 <h3>Formulario</h3>
 
-<span>Ingresa la Empresa:</span> 
-<input type="text" #empresa (keyup)="llamaEmpresa(empresa.value)" [disabled]="getActivadoProperty()"> <!--//Evento en html:   (cuando) = "evento(parametro.value)"   -->
+<span>Ingresa la Empresa:</span>
+<input type="text" [(ngModel)]="empresa" [disabled]="getActivadoProperty()">
+<!--//Evento en html:   (cuando) = "evento(parametro.value)"   -->
 
 <br>
 
 {{textodeRegistro}} <br>
 
-<span>Registrado</span> 
+<span>Registrado</span>
 <input type="checkbox" [checked]="getRegistrado()" (click)="evento()">
 
 <br>
@@ -26,5 +54,3 @@
 <input type="radio" value="No" name="radio-registro" (click)="setUsuarioRegistro($event)">
 <br>
 {{radioRegistro}}
-
-<!--input type="button" value="Aceptar" (click)="llamaEmpresa(empresa.value)"-->

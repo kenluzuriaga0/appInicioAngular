@@ -10,8 +10,8 @@ export class EmpleadoComponent implements OnInit {
   private nombre = "Juan";
   private apellido = "Diaz";
   private edad = 23;
-  //private empresa = "Super Empresa";
-
+   empresa = "Super Empresa";
+  //empresa = "Medilinky"
 
   getNombre() {
     return this.nombre;
@@ -21,6 +21,9 @@ export class EmpleadoComponent implements OnInit {
   }
   getEdad() {
     return this.edad;
+  }
+  getEmpresa() {
+    return this.empresa;
   }
 
   llamaEmpresa(empresa: string) {

@@ -11,3 +11,7 @@ th,td{
 th{
     background-color: darkgrey;
 }
+input[type=radio],input[type=checkbox]{
+    transform: scale(1.5);
+    margin: 10px;
+}

@@ -1,3 +1,27 @@
 <h1>Empleados de la empresa!</h1>
 
 <app-empleado></app-empleado>
+<br>
+<hr>
+<div class="container">
+<h1>Mini Calculadora</h1>
+
+    <form action="">
+
+
+        Numero1: <input type="number" [(ngModel)]="numero1" name="numero1">
+        <br><br>
+        Numero2: <input type="number" [(ngModel)]="numero2" name="numero2">
+        <br><br>
+        <input class="btn btn-primary" type="submit" value="Sumar" (click)="sumar()">
+        <input class="btn btn-danger" type="submit" value="Restar" (click)="restar()">
+        <br><br>
+        <h3>Resultado : {{resultado}}</h3>:
+    </form>
+    </div>
+
+
+
+
+
+

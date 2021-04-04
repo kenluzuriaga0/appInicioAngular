@@ -10,7 +10,7 @@ export class EmpleadoComponent implements OnInit {
   private nombre = "Juan";
   private apellido = "Diaz";
   private edad = 23;
-   empresa = "Super Empresa";
+  empresa = "Super Empresa";
   //empresa = "Medilinky"
 
   getNombre() {
@@ -48,15 +48,27 @@ export class EmpleadoComponent implements OnInit {
     this.textodeRegistro = "Usuario Registrado";
   }
 
-  radioRegistro="";
+  radioRegistro = "";
   setUsuarioRegistro(event: Event) {
     //alert(event.target);
     if ((<HTMLInputElement>event.target).value == "Si") {  //casting del input
       this.radioRegistro = "El usuario SI se registra";
     } else {
       this.radioRegistro = "El usuario NO se registra";
-    } 
+    }
   }
+
+  // ****** Directivas **********
+
+  mostrar: boolean = false;
+  cambiarDirectiva() {
+    if (this.mostrar) {
+      this.mostrar = false;
+    } else {
+      this.mostrar = true;
+    }
+  }
+
 
   constructor() { }
   ngOnInit(): void {

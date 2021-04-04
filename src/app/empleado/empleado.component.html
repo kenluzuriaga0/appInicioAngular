@@ -55,4 +55,9 @@
     <input type="radio" value="No" name="radio-registro" (click)="setUsuarioRegistro($event)">
     <br>
     {{radioRegistro}}
+
+    <button class="btn btn-primary" (click)="cambiarDirectiva()" > Mostrar Texto</button>
+
+    <p *ngIf="mostrar"> {{textodeRegistro}} </p>
+
 </div>

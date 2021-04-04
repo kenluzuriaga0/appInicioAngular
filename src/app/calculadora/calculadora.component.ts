@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-empleados',
-  templateUrl: './empleados.component.html',
-  styleUrls: ['./empleados.component.css']
+  selector: 'app-calculadora',
+  templateUrl: './calculadora.component.html',
+  styleUrls: ['./calculadora.component.css']
 })
-export class EmpleadosComponent implements OnInit {
+export class CalculadoraComponent implements OnInit {
   numero1: number = 0;
   numero2: number = 0;
   resultado: number = 0;
